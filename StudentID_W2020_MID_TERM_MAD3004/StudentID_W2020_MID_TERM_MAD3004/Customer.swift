@@ -19,10 +19,14 @@ class Customer: IDisplay {
             return self.firstName+" "+self.lastName;
         }
     }
-    
     var bills:[Int:Bill];
     
-    
+    init(customerId:Int,firstName:String,lastName:String,bills:[Int:Bill]) {
+        self.customerId=customerId;
+        self.firstName=firstName;
+        self.lastName=lastName;
+        self.bills=bills;
+    }
     
     
     func Display() { }
