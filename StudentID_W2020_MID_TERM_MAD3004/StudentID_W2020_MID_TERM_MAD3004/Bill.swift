@@ -9,12 +9,18 @@
 import Foundation
 
 class Bill: IDisplay {
-    
-    
+
     var billId:Int;
     var billDate:Date;
     var billType:String;
     var totalAmount:Double;
+    
+    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double) {
+        self.billId=billId;
+        self.billDate=billDate;
+        self.billType=billType;
+        self.totalAmount=totalAmount;
+    }
     
     func Display() {
         
