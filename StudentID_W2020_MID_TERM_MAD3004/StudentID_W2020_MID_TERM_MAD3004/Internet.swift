@@ -14,4 +14,10 @@ class Internet: Bill {
     var gbUsed:Float;
     
     
+    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double,_ providerName:String,_ gbUsed:Float) {
+        self.providerName=providerName;
+        self.gbUsed=gbUsed;
+        super.init(billId, billDate, billType, totalAmount);
+    }
+    
 }
