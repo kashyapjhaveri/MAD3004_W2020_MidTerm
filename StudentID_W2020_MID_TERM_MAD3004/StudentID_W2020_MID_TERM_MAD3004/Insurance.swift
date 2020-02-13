@@ -15,4 +15,13 @@ class Insurance {
     var endDate:Date;
     var totalDays:Int;
     var totalInstallment:Int;
+    
+    init(_ providerName:String,_ type:String,_ startDate:Date,_ endDate:Date,_ totalDays:Int,_ totalInstallment:Int) {
+        self.providerName=providerName;
+        self.type=type;
+        self.startDate=startDate;
+        self.endDate=endDate;
+        self.totalDays=totalDays;
+        self.totalInstallment=totalInstallment;
+    }
 }
