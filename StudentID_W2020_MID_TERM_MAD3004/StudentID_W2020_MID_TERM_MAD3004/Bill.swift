@@ -9,6 +9,13 @@
 import Foundation
 
 class Bill: IDisplay {
+    
+    
+    var billId:Int;
+    var billDate:Date;
+    var billType:String;
+    var totalAmount:Double;
+    
     func Display() {
         
     }
