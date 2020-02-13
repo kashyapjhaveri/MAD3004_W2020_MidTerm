@@ -9,7 +9,21 @@
 import Foundation
 
 class Customer: IDisplay {
-    func Display() {
-        
+    
+    var customerId:Int;
+    var firstName:String;
+    var lastName:String;
+    var fullName:String
+    {
+        get{
+            return self.firstName+" "+self.lastName;
+        }
     }
+    
+    var bills:[Int:Bill];
+    
+    
+    
+    
+    func Display() { }
 }
