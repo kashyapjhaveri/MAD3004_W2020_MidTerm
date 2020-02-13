@@ -9,6 +9,9 @@
 import Foundation
 
 class Mobile: Bill {
-    
-    
+    var manufacturerName:String;
+    var planName:String;
+    var mobileNumber:String;
+    var gbUsed:Float;
+    var minuteUsed:Float;
 }

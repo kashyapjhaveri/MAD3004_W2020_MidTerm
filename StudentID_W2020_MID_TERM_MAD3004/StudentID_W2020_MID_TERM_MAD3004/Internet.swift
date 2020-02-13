@@ -20,4 +20,5 @@ class Internet: Bill {
         super.init(billId, billDate, billType, totalAmount);
     }
     
+    override func Display() {}
 }
