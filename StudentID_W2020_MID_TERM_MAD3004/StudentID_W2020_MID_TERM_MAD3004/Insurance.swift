@@ -9,5 +9,10 @@
 import Foundation
 
 class Insurance {
-    
+    var providerName:String;
+    var type:String;
+    var startDate:Date;
+    var endDate:Date;
+    var totalDays:Int;
+    var totalInstallment:Int;
 }
