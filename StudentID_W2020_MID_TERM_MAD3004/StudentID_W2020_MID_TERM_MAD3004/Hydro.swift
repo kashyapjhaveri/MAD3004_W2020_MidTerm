@@ -11,4 +11,12 @@ import Foundation
 class Hydro: Bill {
     var agencyName:String;
     var unitConsumed:Float;
+    
+    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double,_ agencyName:String,_ unitConsumed:Float) {
+        self.agencyName=agencyName;
+        self.unitConsumed=unitConsumed;
+        super.init(billId, billDate, billType, totalAmount);
+    }
+    
+    override func Display() { }
 }
