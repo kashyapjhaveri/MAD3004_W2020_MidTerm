@@ -22,7 +22,7 @@ class Customer: IDisplay {
     
     lazy var bills=[Int:Bill]();
     
-    init(customerId:Int,firstName:String,lastName:String,bills:[Int:Bill]) {
+    init(_ customerId:Int,_ firstName:String,_ lastName:String,_ bills:[Int:Bill]) {
         self.customerId=customerId;
         self.firstName=firstName;
         self.lastName=lastName;
