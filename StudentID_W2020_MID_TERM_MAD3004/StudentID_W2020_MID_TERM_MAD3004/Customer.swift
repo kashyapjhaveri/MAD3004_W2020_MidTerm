@@ -16,10 +16,11 @@ class Customer: IDisplay {
     var fullName:String
     {
         get{
-            return self.firstName+" "+self.lastName;
+            return "\(self.firstName) \(self.lastName)";
         }
     }
-    var bills:[Int:Bill];
+    
+    lazy var bills=[Int:Bill]();
     
     init(customerId:Int,firstName:String,lastName:String,bills:[Int:Bill]) {
         self.customerId=customerId;
@@ -29,5 +30,7 @@ class Customer: IDisplay {
     }
     
     
-    func Display() { }
+    func Display() {
+        
+    }
 }
