@@ -19,18 +19,22 @@ class Customer: IDisplay {
             return "\(self.firstName) \(self.lastName)";
         }
     }
-    
+    var mobileNumber:String;
+    var email:String;
     lazy var bills=[Int:Bill]();
     
-    init(_ customerId:Int,_ firstName:String,_ lastName:String,_ bills:[Int:Bill]) {
+    init(_ customerId:Int,_ firstName:String,_ lastName:String,_ mobileNumber:String,_ email:String) {
         self.customerId=customerId;
         self.firstName=firstName;
         self.lastName=lastName;
-        self.bills=bills;
+        self.mobileNumber=mobileNumber;
+        self.email=email;
     }
     
-    
     func Display() {
-        
+        print("Customer ID:- \(self.customerId)");
+        print("Full Name:- \(self.fullName)");
+        print("Mobile No:- \(self.mobileNumber)");
+        print("Email:- \(self.email)");
     }
 }
