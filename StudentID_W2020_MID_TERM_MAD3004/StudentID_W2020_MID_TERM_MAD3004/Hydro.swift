@@ -12,10 +12,10 @@ class Hydro: Bill {
     var agencyName:String;
     var unitConsumed:Float;
     
-    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double,_ agencyName:String,_ unitConsumed:Float) {
+    init(_ billId:Int,_ billDate:Date,_ totalAmount:Double,_ agencyName:String,_ unitConsumed:Float) {
         self.agencyName=agencyName;
         self.unitConsumed=unitConsumed;
-        super.init(billId, billDate, billType, totalAmount);
+        super.init(billId, billDate, "Hydro", totalAmount);
     }
     
     override func Display() {

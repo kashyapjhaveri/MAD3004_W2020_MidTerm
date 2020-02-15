@@ -15,13 +15,13 @@ class Mobile: Bill {
     var gbUsed:Float;
     var minuteUsed:Float;
     
-    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double,_ manufacturerName:String,_ planName:String,_ mobileNumber:String,_ gbUsed:Float,_ minuteUsed:Float) {
+    init(_ billId:Int,_ billDate:Date,_ totalAmount:Double,_ manufacturerName:String,_ planName:String,_ mobileNumber:String,_ gbUsed:Float,_ minuteUsed:Float) {
         self.manufacturerName=manufacturerName;
         self.planName=planName;
         self.mobileNumber=mobileNumber;
         self.gbUsed=gbUsed;
         self.minuteUsed=minuteUsed;
-        super.init(billId, billDate, billType, totalAmount);
+        super.init(billId, billDate, "Mobile", totalAmount);
     }
     
     override func Display() {
