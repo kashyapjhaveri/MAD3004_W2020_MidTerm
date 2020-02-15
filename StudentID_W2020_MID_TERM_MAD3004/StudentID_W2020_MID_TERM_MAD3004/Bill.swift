@@ -23,6 +23,9 @@ class Bill: IDisplay {
     }
     
     func Display() {
-        
+        print("Bill ID:- \(self.billId)");
+        print("Bill Date:- \(self.billDate)");
+        print("Bill Type:- \(self.billType)");
+        print("Total Amt:- \(self.totalAmount)");
     }
 }
