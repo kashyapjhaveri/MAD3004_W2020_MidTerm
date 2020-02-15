@@ -18,5 +18,9 @@ class Hydro: Bill {
         super.init(billId, billDate, billType, totalAmount);
     }
     
-    override func Display() { }
+    override func Display() {
+        super.Display();
+        print("Agency Name:- \(self.agencyName)");
+        print("Unit Consumed:- \(self.unitConsumed)");
+    }
 }
