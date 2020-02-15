@@ -20,5 +20,9 @@ class Internet: Bill {
         super.init(billId, billDate, billType, totalAmount);
     }
     
-    override func Display() {}
+    override func Display() {
+        super.Display();
+        print("Provder Name:- \(self.providerName)");
+        print("Total GB Used:- \(self.gbUsed)");
+    }
 }
