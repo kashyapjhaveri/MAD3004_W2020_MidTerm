@@ -72,6 +72,17 @@ func initAllCustomers() {
     }
 }
 
+
+func displayAllCustomers() {
+    
+    for customer in customers.values
+    {
+        customer.Display();
+    }
+    
+}
+
+
 //Execution starts from here
 initAllCustomers();
 
