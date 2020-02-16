@@ -31,10 +31,16 @@ class Customer: IDisplay {
         self.email=email;
     }
     
+    func addBill(bill:Bill){
+        self.bills.updateValue(bill, forKey: self.customerId);
+    }
+    
     func Display() {
+        print(" ");
         print("Customer ID:- \(self.customerId)");
         print("Full Name:- \(self.fullName)");
         print("Mobile No:- \(self.mobileNumber)");
         print("Email:- \(self.email)");
+        print(" ");
     }
 }
