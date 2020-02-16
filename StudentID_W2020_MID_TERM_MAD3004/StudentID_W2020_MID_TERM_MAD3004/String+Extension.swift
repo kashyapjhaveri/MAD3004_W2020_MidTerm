@@ -21,4 +21,11 @@ extension String{
         let mobileTest = NSPredicate(format:"SELF MATCHES %@", mobileNumberRegEx)
         return mobileTest.evaluate(with: self)
     }
+    
+    func Repeat(n:Int) {
+        for _ in 1...n {
+            print(self, separator: " ", terminator:" ")
+        }
+        print("");
+    }
 }
