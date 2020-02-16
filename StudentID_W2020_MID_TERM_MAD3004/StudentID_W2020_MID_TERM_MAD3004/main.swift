@@ -82,6 +82,18 @@ func displayAllCustomers() {
     
 }
 
+func displayCustomerById(Id:Int) {
+    let tempCustomer = customers[Id] ?? nil
+    
+    if tempCustomer != nil {
+        tempCustomer?.Display();
+    }
+    else
+    {
+        print("Customer not found");
+    }
+}
+
 
 //Execution starts from here
 initAllCustomers();
