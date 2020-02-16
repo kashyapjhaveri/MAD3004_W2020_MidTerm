@@ -98,4 +98,33 @@ func displayCustomerById(Id:Int) {
 //Execution starts from here
 initAllCustomers();
 
+mainMenuDesign.Repeat(n: 10);
+print("1.Display all customers");
+print("2.Display cutomer by ID")
+mainMenuDesign.Repeat(n: 10);
 
+print("\nEnter your choice:- ");
+choice = readLine() ?? "0";
+
+
+switch choice
+{
+    case "1":
+        displayAllCustomers();
+    break;
+    
+    case "2":
+        print("Enter customer id:- ");
+        if let custId = Int(readLine() ?? "0")
+        {
+            displayCustomerById(Id: custId)
+        }
+    break;
+    
+    case "3":
+        
+    break;
+    
+    default:
+    break;
+}
