@@ -13,9 +13,9 @@ class Bill: IDisplay {
     var billId:Int;
     var billDate:Date;
     var billType:String;
-    var totalAmount:Double;
+    var totalAmount:Float;
     
-    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Double) {
+    init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Float) {
         self.billId=billId;
         self.billDate=billDate;
         self.billType=billType;
