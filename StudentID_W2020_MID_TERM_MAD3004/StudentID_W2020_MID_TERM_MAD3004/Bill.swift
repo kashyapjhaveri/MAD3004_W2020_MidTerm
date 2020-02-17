@@ -15,6 +15,14 @@ class Bill: IDisplay {
     var billType:String;
     var totalAmount:Float;
     
+    var formatedBillDate:String{
+        
+        let tempDateFormatter = DateFormatter();
+        tempDateFormatter.dateFormat = "dd-MMM-yyyy"
+        return tempDateFormatter.string(from: self.billDate);
+        
+    }
+    
     init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Float) {
         self.billId=billId;
         self.billDate=billDate;
@@ -23,9 +31,9 @@ class Bill: IDisplay {
     }
     
     func Display() {
-        print("Bill ID:- \(self.billId)");
-        print("Bill Date:- \(self.billDate)");
-        print("Bill Type:- \(self.billType)");
-        print("Total Amt:- \(self.totalAmount)");
+        print("\n\tBill ID:- \(self.billId)");
+        print("\tBill Date:- \(self.formatedBillDate)");
+        print("\tBill Type:- \(self.billType)");
+        print("\tTotal Amt:- $\(self.totalAmount)");
     }
 }
