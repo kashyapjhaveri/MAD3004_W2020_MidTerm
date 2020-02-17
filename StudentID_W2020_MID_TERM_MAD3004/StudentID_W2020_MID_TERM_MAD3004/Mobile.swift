@@ -27,10 +27,10 @@ class Mobile: Bill {
     
     override func Display() {
         super.Display();
-        print("Manufacturer Name:- \(self.manufacturerName)");
-        print("Plan Name:- \(self.planName)");
+        print("\tManufacturer Name:- \(self.manufacturerName)");
+        print("\tPlan Name:- \(self.planName)");
         //print("Mobile Number:- \(self.mobileNumber)");
-        print("Total GB Used:- \(self.gbUsed)");
-        print("Total Minutes Used:- \(self.minuteUsed)");
+        print("\tTotal GB Used:- \(self.gbUsed)");
+        print("\tTotal Minutes Used:- \(self.minuteUsed)");
     }
 }
