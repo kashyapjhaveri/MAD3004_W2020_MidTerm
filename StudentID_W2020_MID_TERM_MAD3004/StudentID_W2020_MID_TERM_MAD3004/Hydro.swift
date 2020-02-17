@@ -12,9 +12,10 @@ class Hydro: Bill {
     var agencyName:String;
     var unitConsumed:Float;
     
-    init(_ billId:Int,_ billDate:Date,_ totalAmount:Double,_ agencyName:String,_ unitConsumed:Float) {
+    override init(_ billId:Int,_ billDate:Date,_ agencyName:String,_ unitConsumed:Float) {
         self.agencyName=agencyName;
         self.unitConsumed=unitConsumed;
+        let totalAmount = self.unitConsumed * 10;
         super.init(billId, billDate, "Hydro", totalAmount);
     }
     

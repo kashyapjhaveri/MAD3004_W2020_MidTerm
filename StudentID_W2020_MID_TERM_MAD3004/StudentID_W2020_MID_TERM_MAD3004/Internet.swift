@@ -13,11 +13,12 @@ class Internet: Bill {
     var providerName:String;
     var gbUsed:Float;
     
-    
-    init(_ billId:Int,_ billDate:Date,_ totalAmount:Double,_ providerName:String,_ gbUsed:Float) {
+        
+    override init(_ billId:Int,_ billDate:Date,_ providerName:String,_ gbUsed:Float) {
         self.providerName=providerName;
         self.gbUsed=gbUsed;
-        super.init(billId, billDate, "Internet", totalAmount);
+        let totalAmount = self.gbUsed * 5;
+        super.init(billId, billDate, "Internet",totalAmount);
     }
     
     override func Display() {
