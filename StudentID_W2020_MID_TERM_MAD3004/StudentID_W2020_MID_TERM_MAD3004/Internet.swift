@@ -23,7 +23,7 @@ class Internet: Bill {
     
     override func Display() {
         super.Display();
-        print("Provder Name:- \(self.providerName)");
-        print("Total GB Used:- \(self.gbUsed)");
+        print("\tProvder Name:- \(self.providerName)");
+        print("\tTotal GB Used:- \(self.gbUsed)");
     }
 }
