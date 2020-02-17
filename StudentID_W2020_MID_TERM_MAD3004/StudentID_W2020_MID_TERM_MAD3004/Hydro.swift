@@ -21,7 +21,7 @@ class Hydro: Bill {
     
     override func Display() {
         super.Display();
-        print("Agency Name:- \(self.agencyName)");
-        print("Unit Consumed:- \(self.unitConsumed)");
+        print("\tAgency Name:- \(self.agencyName)");
+        print("\tUnit Consumed:- \(self.unitConsumed)");
     }
 }
