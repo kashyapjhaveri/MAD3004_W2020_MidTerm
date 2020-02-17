@@ -9,7 +9,6 @@
 import Foundation
 
 class Customer: IDisplay {
-    
     var customerId:Int;
     var firstName:String;
     var lastName:String;
@@ -21,8 +20,12 @@ class Customer: IDisplay {
     }
     var mobileNumber:String;
     var email:String;
-    lazy var bills=[Int:Bill]();
     
+    lazy var bills=[Int:Bill]();
+    lazy var billGrandTotal=Float();
+    
+    let billMenuDesign = "*";
+
     init(_ customerId:Int,_ firstName:String,_ lastName:String,_ mobileNumber:String,_ email:String) {
         self.customerId=customerId;
         self.firstName=firstName;
@@ -32,7 +35,8 @@ class Customer: IDisplay {
     }
     
     func addBill(bill:Bill){
-        self.bills.updateValue(bill, forKey: self.customerId);
+        self.bills.updateValue(bill, forKey: bill.billId);
+        self.billGrandTotal+=bill.totalAmount;
     }
     
     func Display() {
@@ -42,5 +46,23 @@ class Customer: IDisplay {
         print("Mobile No:- \(self.mobileNumber)");
         print("Email:- \(self.email)");
         print(" ");
+        
+        if self.bills.isEmpty{
+            print("---NOTE:; No biils found---");
+        }
+        else{
+            
+            print("-----Bill Information-----");
+            
+            for bill in self.bills.values
+            {
+                print("\n");
+                billMenuDesign.Repeat(n: 15);
+                bill.Display();
+                billMenuDesign.Repeat(n: 15);
+            }
+            print("\nTotal Amount to Pay $\(self.billGrandTotal)");
+            billMenuDesign.Repeat(n: 15);
+        }
     }
 }
