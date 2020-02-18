@@ -173,12 +173,24 @@ func initAllBills() {
 
 
 func displayAllCustomers() {
-    for customer in customers.values
-    {
+    
+    for customer in customers.values {
         mainMenuDesign.Repeat(n: 10);
         customer.Display();
-        print("\n");
         mainMenuDesign.Repeat(n: 10);
+        print("\n");
+    }
+    
+}
+
+func displayAllCustomersWithBillInfo() {
+    for customer in customers.values
+    {
+        mainMenuDesign.Repeat(n: 15);
+        print("\n");
+        customer.DisplayWithBillInfo();
+        print("\n");
+        mainMenuDesign.Repeat(n: 15);
         print("\n");
     }
 }
@@ -199,7 +211,8 @@ initAllBills();
 
 mainMenuDesign.Repeat(n: 10);
 print("\n1.Display all customers");
-print("2.Display cutomer by ID")
+print("2.Display cutomer by ID");
+print("3.Display all customers with bill info")
 mainMenuDesign.Repeat(n: 10);
 
 print("\nEnter your choice:- ");
@@ -230,6 +243,10 @@ switch choice
         }
     break;
 
+    case "3":
+        displayAllCustomersWithBillInfo();
+    break;
+    
     default:
     break;
 }
