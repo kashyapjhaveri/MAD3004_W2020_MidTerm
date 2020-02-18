@@ -22,7 +22,11 @@ class Customer: IDisplay {
     var email:String;
     
     lazy var bills=[Int:Bill]();
-    lazy var billGrandTotal=Float();
+    lazy var billGrandTotal:Float = 0.0;
+    
+    var formattedBillGrandTotal:String{
+        return self.billGrandTotal.formattedCurrency();
+    }
     
     let billMenuDesign = "*";
 
@@ -51,7 +55,6 @@ class Customer: IDisplay {
             print("---NOTE:; No biils found---");
         }
         else{
-            
             print("-----Bill Information-----");
             
             for bill in self.bills.values
@@ -61,7 +64,7 @@ class Customer: IDisplay {
                 bill.Display();
                 billMenuDesign.Repeat(n: 15);
             }
-            print("\nTotal Amount to Pay $\(self.billGrandTotal)");
+            print("\nTotal Amount to Pay \(self.formattedBillGrandTotal)");
             billMenuDesign.Repeat(n: 15);
         }
     }
