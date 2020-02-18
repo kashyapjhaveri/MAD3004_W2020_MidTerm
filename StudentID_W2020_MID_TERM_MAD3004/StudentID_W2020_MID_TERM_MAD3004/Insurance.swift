@@ -17,15 +17,11 @@ class Insurance: Bill {
     var totalInstallment:Int;
     
     var formatedStartDate:String{
-        let tempDateFormatter = DateFormatter();
-        tempDateFormatter.dateFormat = "dd-MMM-yyyy";
-        return tempDateFormatter.string(from: self.startDate);
+        return self.startDate.formattedDate(format: "dd-MM-yyyy");
     }
     
     var formatedEndDate:String{
-        let tempDateFormatter = DateFormatter();
-        tempDateFormatter.dateFormat = "dd-MMM-yyyy";
-        return tempDateFormatter.string(from: self.endDate);
+        return self.endDate.formattedDate(format: "dd-MMM-yyyy");
     }
     
     init(_ billId:Int,_ billDate:Date,_ providerName:String,_ type:String,_ startDate:Date,_ endDate:Date) {
