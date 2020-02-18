@@ -16,11 +16,11 @@ class Bill: IDisplay {
     var totalAmount:Float;
     
     var formatedBillDate:String{
-        
-        let tempDateFormatter = DateFormatter();
-        tempDateFormatter.dateFormat = "dd-MMM-yyyy"
-        return tempDateFormatter.string(from: self.billDate);
-        
+        return self.billDate.formattedDate(format: "dd-MMM-yyyy")
+    }
+    
+    var formattedTotalAmount:String{
+        return self.totalAmount.formattedCurrency();
     }
     
     init(_ billId:Int,_ billDate:Date,_ billType:String,_ totalAmount:Float) {
@@ -34,6 +34,6 @@ class Bill: IDisplay {
         print("\n\tBill ID:- \(self.billId)");
         print("\tBill Date:- \(self.formatedBillDate)");
         print("\tBill Type:- \(self.billType)");
-        print("\tTotal Amt:- $\(self.totalAmount)");
+        print("\tTotal Amt:- \(self.formattedTotalAmount)");
     }
 }
