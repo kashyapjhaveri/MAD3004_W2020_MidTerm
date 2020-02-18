@@ -136,38 +136,52 @@ func initAllBills() {
     var tempInternetObject:Internet;
     var tempMobileObject:Mobile;
     var tempHydroObject:Hydro;
+    var tempInsuranceObject:Insurance;
+    var tempDate=Date();
+    var tempEndDate=Date();
     
-    if let tempDate = dateFormate.date(from: "17/02/2020")
+    if let temp_date = dateFormate.date(from: "17/02/2020")
     {
-        //Bill Information for 1st Customer
-        tempInternetObject = Internet(1, tempDate, "Bell", 100.0);
-        tempMobileObject = Mobile(2, tempDate, "Fido", "Medium", 10.0, 500.0)
-        if let tempCust = getCustomerById(Id: 1)
-        {
-            tempCust.addBill(bill: tempInternetObject);
-            tempCust.addBill(bill: tempMobileObject);
-        }
-        
-        //Bill Information for 2nd Customer
-        tempInternetObject = Internet(3, tempDate, "Rogers", 150.0);
-        tempMobileObject = Mobile(4, tempDate, "Chatr", "Medium", 10.0, 600.0)
-        tempHydroObject = Hydro(5, tempDate, "Toronto Hydro Crop", 100);
-        
-        if let tempCust = getCustomerById(Id: 2)
-        {
-            tempCust.addBill(bill: tempInternetObject);
-            tempCust.addBill(bill: tempMobileObject);
-            tempCust.addBill(bill: tempHydroObject);
-        }
-        
-        if let tempEndDate = dateFormate.date(from: "16/02/2021")
-        {
-            let tempInsuranceObject = Insurance(6, tempDate, "Aviva", "Car Insurance", tempDate, tempEndDate);
-            if let tempCust = getCustomerById(Id: 4)
-            {
-                tempCust.addBill(bill:tempInsuranceObject);
-            }
-        }
+        tempDate=temp_date;
+    }
+    
+    //Bill Information for 1st Customer
+    tempInternetObject = Internet(1, tempDate, "Bell", 100.0);
+    tempMobileObject = Mobile(2, tempDate, "Fido", "Medium", 10.0, 500.0)
+    if let tempCust = getCustomerById(Id: 1)
+    {
+        tempCust.addBill(bill: tempInternetObject);
+        tempCust.addBill(bill: tempMobileObject);
+    }
+    
+    //Bill Information for 2nd Customer
+    tempInternetObject = Internet(3, tempDate, "Rogers", 150.0);
+    tempMobileObject = Mobile(4, tempDate, "Chatr", "Medium", 10.0, 600.0)
+    tempHydroObject = Hydro(5, tempDate, "Toronto Hydro Crop", 100);
+    
+    if let temp_date = dateFormate.date(from: "16/02/2022") {
+        tempEndDate=temp_date;
+    }
+    
+    tempInsuranceObject = Insurance(7, tempDate, "Aviva", "Car Insurance", tempDate, tempEndDate);
+    
+    if let tempCust = getCustomerById(Id: 2)
+    {
+        tempCust.addBill(bill: tempInternetObject);
+        tempCust.addBill(bill: tempMobileObject);
+        tempCust.addBill(bill: tempHydroObject);
+        tempCust.addBill(bill: tempInsuranceObject);
+    }
+    
+    
+    //Bill information for 4th Customer
+    if let temp_date = dateFormate.date(from: "16/02/2021") {
+        tempEndDate=temp_date;
+    }
+    tempInsuranceObject = Insurance(7, tempDate, "Aviva", "Car Insurance", tempDate, tempEndDate);
+    if let tempCust = getCustomerById(Id: 4)
+    {
+        tempCust.addBill(bill:tempInsuranceObject);
     }
 }
 
