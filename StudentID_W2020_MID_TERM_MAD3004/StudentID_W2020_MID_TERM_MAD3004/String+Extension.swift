@@ -26,6 +26,5 @@ extension String{
         for _ in 1...n {
             print(self, separator: " ", terminator:" ")
         }
-        print("");
     }
 }

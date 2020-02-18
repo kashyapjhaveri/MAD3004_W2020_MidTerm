@@ -46,6 +46,6 @@ class Insurance: Bill {
         print("\tStart Date:- \(self.formatedStartDate)");
         print("\tEnd Date:- \(self.formatedEndDate)");
         print("\tTotal Days:- \(self.totalDays)");
-        print("\tTotal Installments:- \(self.totalInstallment)");
+        print("\tTotal Installments of $500:- \(self.totalInstallment)");
     }
 }
