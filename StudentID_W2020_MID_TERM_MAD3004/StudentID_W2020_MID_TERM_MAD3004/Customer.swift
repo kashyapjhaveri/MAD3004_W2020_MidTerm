@@ -44,15 +44,20 @@ class Customer: IDisplay {
     }
     
     func Display() {
-        print(" ");
+        print("\nCustomer ID:- \(self.customerId)");
+        print("Full Name:- \(self.fullName)");
+        print("Mobile No:- \(self.mobileNumber)");
+        print("Email:- \(self.email)");
+    }
+    
+    func DisplayWithBillInfo() {
         print("Customer ID:- \(self.customerId)");
         print("Full Name:- \(self.fullName)");
         print("Mobile No:- \(self.mobileNumber)");
         print("Email:- \(self.email)");
-        print(" ");
         
         if self.bills.isEmpty{
-            print("---NOTE:; No biils found---");
+            print("---NOTE:- No biils found---");
         }
         else{
             print("-----Bill Information-----");
